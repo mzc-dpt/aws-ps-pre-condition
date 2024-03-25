@@ -14,7 +14,8 @@ data "aws_ami" "al2" {
 }
 
 resource "aws_instance" "ec2" {
-  ami           = data.aws_ami.al2.id
+  # ami           = data.aws_ami.al2.id
+  ami = "ami-0a9fe0aef1104bdcf"
   instance_type = var.ec2_type
   key_name      = var.ec2_key
   associate_public_ip_address = true
